@@ -1,6 +1,11 @@
 #ifndef BOOT_UI_H
 #define BOOT_UI_H
 
-EFI_STATUS bwrite(const wchar_t * f);
+#include <efi.h>
+#include <efiapi.h>
+
+// Bootloader Write
+// Sends output to console
+#define ENDL L"\r\n"
 
 #endif
