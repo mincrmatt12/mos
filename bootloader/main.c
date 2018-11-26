@@ -15,7 +15,7 @@ try_get_protocols() {
 	
 	EFI_HANDLE disks[15]; // Should be enough. FIXME: get this to be dynamic.
 	UINTN buf_size = sizeof(disks);
-	EFI_GUID protocolID = EFI_DISK_IO_PROTOCOL_GUID;
+	EFI_GUID protocolID = EFI_BLOCK_IO_PROTOCOL_GUID;
 	EFI_STATUS status = uefi_call_wrapper(BS->LocateHandle, 5,
 			ByProtocol,
 			&protocolID,
