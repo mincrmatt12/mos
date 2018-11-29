@@ -41,7 +41,7 @@ try_get_protocols() {
 	}
 
 	UINT8 disk_count = buf_size / sizeof(EFI_HANDLE);
-	Print(L"disks = %d" ENDL, disk_count);
+	Print(L"block devs = %d" ENDL, disk_count);
 	
 	// Allocte the Disks array, and populate it with the handles to disks
 	g_disks = AllocatePool(buf_size);
